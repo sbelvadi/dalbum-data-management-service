@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="dalbum-data-management-service">
+		<class>com.dalbum.data.model.ArtworkImage</class>
+		<class>com.dalbum.data.model.Dalbum</class>
+		<class>com.dalbum.data.model.DalbumMusician</class>
+		<class>com.dalbum.data.model.DalbumMusicianInstrument</class>
+		<class>com.dalbum.data.model.DalbumTrack</class>
+		<class>com.dalbum.data.model.DextraLabel</class>
+		<class>com.dalbum.data.model.EmbeddedHiddenDimension</class>
+		<class>com.dalbum.data.model.Lyric</class>
+		<class>com.dalbum.data.model.OtherImage</class>
+		<class>com.dalbum.data.model.OtherTrack</class>
+		<class>com.dalbum.data.model.Text</class>
+		<class>com.dalbum.data.model.UnpublishedMeta</class>
+		<class>com.dalbum.data.model.Video</class>
+		<class>com.dalbum.data.model.Credit</class>
+		<class>com.dalbum.data.model.DalbumLangCode</class>
+	
+	</persistence-unit>
+</persistence>

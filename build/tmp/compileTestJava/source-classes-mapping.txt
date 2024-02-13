@@ -1,0 +1,2 @@
+com/dalbum/data/ApplicationTests.java
+ com.dalbum.data.ApplicationTests

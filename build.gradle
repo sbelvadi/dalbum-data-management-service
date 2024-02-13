@@ -1,0 +1,65 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.1'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	
+}
+
+group = 'com.dalbum'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//testImplementation 'org.springframework.security:spring-security-test'
+	
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+	
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	//compile group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	//compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    
+    testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+    
+   // classpath "org.openapitools:openapi-generator-gradle-plugin:5.0.0"
+    implementation 'org.springdoc:springdoc-openapi-webmvc-core:1.5.0'
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-core
+    //implementation group: 'org.springdoc', name: 'springdoc-openapi-core', version: '1.1.49'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.0'
+
+    
+}
+
+/*
+application {
+    // Define the main class for the application.
+    mainClass = 'com.dalbum.dlbmdatamgmt.Application'
+}
+*/
+
+test {
+	useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'dalbum-data-api',
+                   'Implementation-Version': version
+    }
+}
+
